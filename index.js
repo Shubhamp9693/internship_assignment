@@ -11,7 +11,7 @@ const uploadFile = require('./multer');
 
 dotenv.config()
 const app = express()
-mongoose.connect('mongodb+srv://user:user@cluster0.jos9u.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
 })
 
